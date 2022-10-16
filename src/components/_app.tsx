@@ -1,12 +1,11 @@
 import { GlobalStyle } from "../styles/global";
+import Navbar from "./Navbar";
 
 export default function App() {
   return (
     <>
       <GlobalStyle />
-      <div>
-        <h1>Portifólio</h1>
-      </div>
+      <Navbar />
     </>
   );
 }
