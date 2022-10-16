@@ -52,4 +52,14 @@ export const Chevron = styled(BsChevronDown)`
   margin-top: 150px;
   width: 150px;
   height: 75px;
+  animation: bounce 0.8s alternate-reverse infinite;
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 `;

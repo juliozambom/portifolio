@@ -30,6 +30,7 @@ export const Container = styled.div`
 
 export const ProjectDetails = styled.div`
   margin-top: 16px;
+
   div {
     display: flex;
     align-items: center;
