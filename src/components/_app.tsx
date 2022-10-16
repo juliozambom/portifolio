@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../styles/theme";
+import About from "./About";
 
 export default function App() {
   const colorMode = "light";
@@ -11,6 +12,7 @@ export default function App() {
       <GlobalStyle />
       <Navbar />
       <Header />
+      <About />
     </ThemeProvider>
   );
 }
