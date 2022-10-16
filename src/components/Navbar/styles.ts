@@ -7,11 +7,16 @@ export const Container = styled.nav`
   align-items: center;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  font-weight: 800;
+  font-size: 32px;
+`;
 
 export const NavLinks = styled.ul`
   display: flex;
   gap: 40px;
 `;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+  color: inherit;
+`;
