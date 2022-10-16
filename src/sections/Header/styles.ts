@@ -1,9 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { BsChevronDown } from 'react-icons/bs';
 
 export const Container = styled.header`
   margin-top: 64px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export const PresentationContainer = styled.div`
@@ -38,4 +44,12 @@ export const PresentationImage = styled.img`
   filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
   border-radius: 24px 24px 0 0;
   height: 17.5rem;
+`;
+
+export const Chevron = styled(BsChevronDown)`
+  color: ${({ theme }) => theme.colors.purple[700]};
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 150px;
+  height: 75px;
 `;
