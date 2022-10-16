@@ -8,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-size: 20px;
+    line-height: 1.5;
     }
     
     body {
@@ -15,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
         background: ${theme.light.colors.purple[400]};
         margin: 0 auto;
         font-family: 'Poppins', sans-serif;
-        font-size: 20px;
-        color: ${theme.light.colors.purple[50]}
+        color: ${theme.light.colors.purple[50]};
     }
 `;
