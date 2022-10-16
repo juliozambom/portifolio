@@ -12,7 +12,7 @@ export const Container = styled.div`
     margin-top: 48px;
   }
 
-  h1 {
+  .title {
     color: ${({ theme }) => theme.colors.purple[700]};
     font-size: 2rem;
   }

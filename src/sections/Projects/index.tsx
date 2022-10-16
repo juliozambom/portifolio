@@ -4,7 +4,7 @@ import { Container } from './styles';
 export default function Projects() {
   return (
     <Container>
-      <h1>Projetos</h1>
+      <h1 className="title">Projetos</h1>
 
       <div className="projects-list">
         <ProjectCard />
