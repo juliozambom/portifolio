@@ -22,7 +22,7 @@ export const Container = styled.div`
     width: 2.5rem;
     height: 2.5rem;
     opacity: 0.5;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .icon:hover {
