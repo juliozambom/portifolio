@@ -25,4 +25,9 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         border: 0;
     }
+
+    .title {
+    font-size: 2rem;
+    color: ${theme.light.colors.purple[700]};
+  }
 `;

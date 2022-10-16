@@ -11,11 +11,6 @@ export const Container = styled.div`
     max-width: 50%;
   }
 
-  h1 {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.purple[700]};
-  }
-
   .short-bio {
     display: flex;
     flex-direction: column;

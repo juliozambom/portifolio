@@ -4,7 +4,7 @@ export default function About() {
   return (
     <Container>
       <div className="about-text">
-        <h1>Sobre mim</h1>
+        <h1 className="title">Sobre mim</h1>
         { /* prettier-ignore */}
         <div className='short-bio'>
             <p> 

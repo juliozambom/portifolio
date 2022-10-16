@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Header from '../sections/Header';
 import About from '../sections/About';
 import Projects from '../sections/Projects';
+import Techs from '../sections/Techs';
 
 export default function App() {
   const colorMode = 'light';
@@ -16,6 +17,7 @@ export default function App() {
       <Header />
       <About />
       <Projects />
+      <Techs />
     </ThemeProvider>
   );
 }

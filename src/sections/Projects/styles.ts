@@ -12,11 +12,6 @@ export const Container = styled.div`
     margin-top: 48px;
   }
 
-  .title {
-    color: ${({ theme }) => theme.colors.purple[700]};
-    font-size: 2rem;
-  }
-
   button {
     margin: 0 auto;
     margin-top: 64px;
