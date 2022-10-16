@@ -1,9 +1,9 @@
-import { Container, Title, NavLinks, Link } from "./styles";
+import { Container, Title, NavLinks, Link } from './styles';
 
 export default function Navbar() {
   return (
     <Container>
-      <Title>{"</>"}</Title>
+      <Title>{'</>'}</Title>
       <NavLinks>
         <Link href="">Sobre</Link>
         <Link href="">Projetos</Link>
