@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { BsChevronDown } from 'react-icons/bs';
 
 export const Container = styled.header`
-  margin-top: 64px;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
 
   .top {
     display: flex;
@@ -49,7 +50,7 @@ export const PresentationImage = styled.img`
 export const Chevron = styled(BsChevronDown)`
   color: ${({ theme }) => theme.colors.purple[700]};
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 120px;
   width: 150px;
   height: 75px;
   animation: bounce 0.8s alternate-reverse infinite;

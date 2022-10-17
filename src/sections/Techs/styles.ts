@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 150px;
+  margin-top: 250px;
 
   .techs-list {
     margin-top: 56px;

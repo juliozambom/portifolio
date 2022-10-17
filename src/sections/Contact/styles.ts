@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // arruda esteve aqui
 
 export const Container = styled.div`
-  margin-top: 150px;
+  margin-top: 250px;
 
   p {
     margin-top: 2.5rem;
