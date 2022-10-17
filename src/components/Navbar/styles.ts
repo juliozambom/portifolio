@@ -50,7 +50,7 @@ export const Container = styled.nav<IContainerProps>`
       content: '';
       left: 0;
       position: absolute;
-      height: 2rem;
+      height: 2.2rem;
       margin-top: 8px;
       width: 100%;
       animation: typing 6s steps(${({ maxWordLength }) => maxWordLength})
