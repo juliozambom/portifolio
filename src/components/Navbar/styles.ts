@@ -21,11 +21,11 @@ export const Container = styled.nav<IContainerProps>`
   }
 
   .dynamic-text-list {
-    height: 3.5rem;
+    height: 3.8rem;
   }
 
   .dynamic-text {
-    height: 3.5rem;
+    height: 3.8rem;
     animation: slide
       ${({ wordsQuantity }) =>
         `${wordsQuantity * 6}s steps(${wordsQuantity}) infinite`};
@@ -33,7 +33,7 @@ export const Container = styled.nav<IContainerProps>`
     @keyframes slide {
       100% {
         transform: translateY(
-          ${({ wordsQuantity }) => wordsQuantity * -3.5}rem
+          ${({ wordsQuantity }) => wordsQuantity * -3.8}rem
         );
       }
     }
@@ -42,15 +42,15 @@ export const Container = styled.nav<IContainerProps>`
   .dynamic-text span {
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
-    line-height: 3.5rem;
-    font-size: 1.3rem;
+    line-height: 3.8rem;
+    font-size: 1.6rem;
     position: relative;
 
     &::after {
       content: '';
       left: 0;
       position: absolute;
-      height: 2.2rem;
+      height: 2.5rem;
       margin-top: 8px;
       width: 100%;
       animation: typing 6s steps(${({ maxWordLength }) => maxWordLength})
