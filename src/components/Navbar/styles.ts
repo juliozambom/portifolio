@@ -21,18 +21,20 @@ export const Container = styled.nav<IContainerProps>`
   }
 
   .dynamic-text-list {
-    height: 3rem;
+    height: 3.5rem;
   }
 
   .dynamic-text {
-    height: 3rem;
+    height: 3.5rem;
     animation: slide
       ${({ wordsQuantity }) =>
         `${wordsQuantity * 6}s steps(${wordsQuantity}) infinite`};
 
     @keyframes slide {
       100% {
-        transform: translateY(${({ wordsQuantity }) => wordsQuantity * -3}rem);
+        transform: translateY(
+          ${({ wordsQuantity }) => wordsQuantity * -3.5}rem
+        );
       }
     }
   }
@@ -40,7 +42,7 @@ export const Container = styled.nav<IContainerProps>`
   .dynamic-text span {
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-size: 1.3rem;
     position: relative;
 
@@ -48,7 +50,7 @@ export const Container = styled.nav<IContainerProps>`
       content: '';
       left: 0;
       position: absolute;
-      height: 2.2rem;
+      height: 2rem;
       margin-top: 8px;
       width: 100%;
       animation: typing 6s steps(${({ maxWordLength }) => maxWordLength})
