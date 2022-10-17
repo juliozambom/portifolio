@@ -12,23 +12,22 @@ export default function Navbar() {
   ];
   const [currentPhrase, setCurrentPhrase] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      handleNextPhrase();
-    }, 6000);
-  }, [currentPhrase]);
-
-  function handleNextPhrase() {
+  const changePhrase = setInterval(() => {
     if (currentPhrase === phrases.length - 1) {
       setCurrentPhrase(0);
     } else {
       setCurrentPhrase(currentPhrase + 1);
     }
-  }
+    console.log(currentPhrase);
+    clearInterval(changePhrase);
+  }, 6000);
 
   return (
     <Container numberOfLetters={phrases[currentPhrase].length}>
-      <div className="left">
+      <div
+        className="left"
+        style={{ animation: 'typing 6s steps(10) infinite' }}
+      >
         <h1 className="title">{`</${phrases[currentPhrase]}>`}</h1>
       </div>
       <NavLinks>

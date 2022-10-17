@@ -13,8 +13,6 @@ export const Container = styled.nav<IProps>`
   .left {
     display: flex;
     overflow: hidden;
-    animation: typing 6s steps(${({ numberOfLetters }) => numberOfLetters + 8})
-      infinite;
     width: 0;
 
     &:after {
