@@ -5,11 +5,46 @@ export const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
 
-export const Title = styled.h1`
-  font-weight: 800;
-  font-size: 32px;
+  .left {
+    display: flex;
+    overflow: hidden;
+    animation: typing 6s steps(${({ numberOfLetters }) => numberOfLetters + 8})
+      infinite;
+    width: 0;
+
+    &:after {
+      content: '';
+      margin-left: 2px;
+      border-right: 2px solid ${({ theme }) => theme.colors.purple[700]};
+      font-size: 32px;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 32px;
+      overflow: hidden;
+      color: ${({ theme }) => theme.colors.purple[50]};
+    }
+
+    @keyframes typing {
+      30% {
+        width: 4px;
+      }
+
+      45% {
+        width: ${({ numberOfLetters }) => numberOfLetters * 24 + 60}px;
+      }
+
+      80% {
+        width: ${({ numberOfLetters }) => numberOfLetters * 24 + 60}px;
+      }
+
+      10% {
+        width: 4px;
+      }
+    }
+  }
 `;
 
 export const NavLinks = styled.ul`
