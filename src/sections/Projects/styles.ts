@@ -10,6 +10,14 @@ export const Container = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 64px;
     margin-top: 48px;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   button {
