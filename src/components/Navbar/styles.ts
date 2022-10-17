@@ -77,23 +77,24 @@ export const Container = styled.nav<IContainerProps>`
 export const NavLinks = styled.ul`
   display: flex;
   gap: 40px;
-`;
 
-export const Link = styled.a`
-  color: inherit;
-  border-bottom: 2px solid transparent;
+  li {
+    color: inherit;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
 
-  &::after {
-    content: '';
-    display: flex;
-    margin: 0 auto;
-    background: ${({ theme }) => theme.colors.purple[50]};
-    height: 0.1rem;
-    width: 0;
-    transition: all 0.2s ease-in-out;
-  }
+    &::after {
+      content: '';
+      display: flex;
+      margin: 0 auto;
+      background: ${({ theme }) => theme.colors.purple[50]};
+      height: 0.1rem;
+      width: 0;
+      transition: all 0.2s ease-in-out;
+    }
 
-  &:hover::after {
-    width: 100%;
+    &:hover::after {
+      width: 100%;
+    }
   }
 `;

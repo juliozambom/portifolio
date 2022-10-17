@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 export default function Techs() {
   return (
-    <Container>
+    <Container id="Techs">
       <h1 className="title">Tecnologias</h1>
 
       <div className="techs-list">

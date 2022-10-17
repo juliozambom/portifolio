@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Container, NavLinks, Link } from './styles';
+import { Link } from 'react-scroll';
+import { Container, NavLinks } from './styles';
 
 export default function Navbar() {
   const phrases = [
@@ -27,10 +27,18 @@ export default function Navbar() {
       </div>
 
       <NavLinks>
-        <Link href="">Sobre</Link>
-        <Link href="">Projetos</Link>
-        <Link href="">Tecnologias</Link>
-        <Link href="">Contato</Link>
+        <Link to="About" smooth offset={-48}>
+          <li>Sobre</li>
+        </Link>
+        <Link to="Projects" smooth offset={-48}>
+          <li>Projetos</li>
+        </Link>
+        <Link to="Techs" smooth offset={-48}>
+          <li>Tecnologias</li>
+        </Link>
+        <Link to="Contact" smooth offset={-48}>
+          <li>Contato</li>
+        </Link>
       </NavLinks>
     </Container>
   );

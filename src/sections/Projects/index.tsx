@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 export default function Projects() {
   return (
-    <Container>
+    <Container id="Projects">
       <h1 className="title">Projetos</h1>
 
       <div className="projects-list">

@@ -2,7 +2,7 @@ import { Container, ReactIcon } from './styles';
 
 export default function About() {
   return (
-    <Container>
+    <Container id="About">
       <div className="about-text">
         <h1 className="title">Sobre mim</h1>
         { /* prettier-ignore */}
