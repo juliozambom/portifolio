@@ -41,7 +41,7 @@ export const Container = styled.nav<IContainerProps>`
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
     line-height: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: relative;
 
     &::after {
