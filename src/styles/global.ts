@@ -33,6 +33,10 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 360px) {
             font-size: 10px;
         }
+
+        @media (max-width: 268px) {
+            font-size: 8px;
+        }
     }
     
     body {
