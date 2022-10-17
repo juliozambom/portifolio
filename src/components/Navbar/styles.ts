@@ -12,6 +12,7 @@ export const Container = styled.nav<IContainerProps>`
   align-items: center;
   position: absolute;
   width: 90%;
+  max-width: 1400px;
 
   .static-container {
     display: flex;
