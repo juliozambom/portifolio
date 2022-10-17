@@ -10,6 +10,8 @@ export const Container = styled.nav<IContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  width: 90%;
 
   .static-container {
     display: flex;
