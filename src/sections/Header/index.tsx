@@ -1,9 +1,12 @@
+import { Link } from 'react-scroll';
+
 import {
   Container,
   PresentationContainer,
   PresentationImage,
   Chevron,
 } from './styles';
+
 import img from '../../assets/header-img.png';
 
 export default function Header() {
@@ -22,7 +25,9 @@ export default function Header() {
         </PresentationContainer>
         <PresentationImage src={img} alt="Presentation Image" />
       </div>
-      <Chevron strokeWidth={0.5} />
+      <Link to="Projects" smooth offset={-48} style={{ margin: '0 auto' }}>
+        <Chevron strokeWidth={0.5} />
+      </Link>
     </Container>
   );
 }

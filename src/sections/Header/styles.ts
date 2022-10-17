@@ -65,11 +65,11 @@ export const PresentationImage = styled.img`
 
 export const Chevron = styled(BsChevronDown)`
   color: ${({ theme }) => theme.colors.purple[700]};
-  margin: 0 auto;
   margin-top: 64px;
   width: 7.5rem;
   height: 3.5rem;
   animation: bounce 0.8s alternate-reverse infinite;
+  cursor: pointer;
 
   @media (max-width: 1080px) {
     margin-top: 48px;
