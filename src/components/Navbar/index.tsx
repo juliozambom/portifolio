@@ -27,7 +27,7 @@ export default function Navbar() {
   }
 
   return (
-    <Container>
+    <Container numberOfLetters={phrases[currentPhrase].length}>
       <div className="left">
         <h1 className="title">{`</${phrases[currentPhrase]}>`}</h1>
       </div>

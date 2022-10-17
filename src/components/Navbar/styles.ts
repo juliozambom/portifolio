@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.nav`
+interface IProps {
+  numberOfLetters: number;
+}
+
+export const Container = styled.nav<IProps>`
   height: 80px;
   display: flex;
   justify-content: space-between;
