@@ -9,6 +9,10 @@ export const Container = styled.div`
 
   .about-text {
     max-width: 50%;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   .short-bio {
@@ -34,4 +38,12 @@ export const ReactIcon = styled(FaReact)`
   width: 25rem;
   height: auto;
   color: ${({ theme }) => theme.colors.purple[800]};
+
+  @media (max-width: 960px) {
+    width: 15rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
