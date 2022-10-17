@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="static-container">
         <div className="dynamic-text-list">
           {phrases.map((phrase) => (
-            <div className="dynamic-text">
+            <div key={phrase} className="dynamic-text">
               <span>{`</${phrase}>`}</span>
             </div>
           ))}
