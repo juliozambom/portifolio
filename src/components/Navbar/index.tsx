@@ -5,31 +5,27 @@ export default function Navbar() {
   const phrases = [
     'div',
     'react',
+    'nodejs',
     'reactnative',
     'typescript',
     'javascript',
     'juliozambom',
   ];
-  const [currentPhrase, setCurrentPhrase] = useState(0);
 
-  const changePhrase = setInterval(() => {
-    if (currentPhrase === phrases.length - 1) {
-      setCurrentPhrase(0);
-    } else {
-      setCurrentPhrase(currentPhrase + 1);
-    }
-    console.log(currentPhrase);
-    clearInterval(changePhrase);
-  }, 6000);
+  const maxWordLength = Math.max(...phrases.map((phrase) => phrase.length));
 
   return (
-    <Container numberOfLetters={phrases[currentPhrase].length}>
-      <div
-        className="left"
-        style={{ animation: 'typing 6s steps(10) infinite' }}
-      >
-        <h1 className="title">{`</${phrases[currentPhrase]}>`}</h1>
+    <Container maxWordLength={maxWordLength} wordsQuantity={phrases.length}>
+      <div className="static-container">
+        <div className="dynamic-text-list">
+          {phrases.map((phrase) => (
+            <div className="dynamic-text">
+              <span>{`</${phrase}>`}</span>
+            </div>
+          ))}
+        </div>
       </div>
+
       <NavLinks>
         <Link href="">Sobre</Link>
         <Link href="">Projetos</Link>

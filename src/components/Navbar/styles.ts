@@ -1,49 +1,74 @@
 import styled from 'styled-components';
 
-interface IProps {
-  numberOfLetters: number;
+interface IContainerProps {
+  maxWordLength: number;
+  wordsQuantity: number;
 }
 
-export const Container = styled.nav<IProps>`
+export const Container = styled.nav<IContainerProps>`
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .left {
+  .static-container {
     display: flex;
     overflow: hidden;
-    width: 0;
+    width: calc(100% + 2px);
+  }
 
-    &:after {
-      content: '';
-      margin-left: 2px;
-      border-right: 2px solid ${({ theme }) => theme.colors.purple[700]};
-      font-size: 32px;
+  .dynamic-text-list {
+    height: 3rem;
+  }
+
+  .dynamic-text {
+    height: 3rem;
+    animation: slide
+      ${({ wordsQuantity }) =>
+        `${wordsQuantity * 6}s steps(${wordsQuantity}) infinite`};
+
+    @keyframes slide {
+      100% {
+        transform: translateY(${({ wordsQuantity }) => wordsQuantity * -3}rem);
+      }
     }
+  }
 
-    h1 {
-      font-weight: 800;
-      font-size: 32px;
-      overflow: hidden;
-      color: ${({ theme }) => theme.colors.purple[50]};
+  .dynamic-text span {
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      left: 0;
+      position: absolute;
+      height: 2.2rem;
+      margin-top: 8px;
+      width: 100%;
+      animation: typing 6s steps(${({ maxWordLength }) => maxWordLength})
+        infinite;
+      background: ${({ theme }) => theme.colors.purple[400]};
+      border-left: 2.5px solid ${({ theme }) => theme.colors.purple[700]};
     }
 
     @keyframes typing {
-      30% {
-        width: 4px;
+      20% {
+        left: 0;
       }
 
-      45% {
-        width: ${({ numberOfLetters }) => numberOfLetters * 24 + 60}px;
+      40% {
+        left: 100%;
       }
 
-      80% {
-        width: ${({ numberOfLetters }) => numberOfLetters * 24 + 60}px;
+      90% {
+        left: 100%;
       }
 
-      10% {
-        width: 4px;
+      100% {
+        left: 0;
       }
     }
   }
