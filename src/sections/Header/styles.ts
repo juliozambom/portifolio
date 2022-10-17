@@ -14,6 +14,7 @@ export const Container = styled.header`
   .top {
     display: flex;
     justify-content: space-between;
+    margin-top: 96px;
 
     @media (max-width: 1080px) {
       flex-direction: column;
