@@ -1,4 +1,6 @@
 import { Link } from 'react-scroll';
+import { RiMenu3Line } from 'react-icons/ri';
+
 import { Container, NavLinks } from './styles';
 
 export default function Navbar() {
@@ -39,6 +41,8 @@ export default function Navbar() {
         <Link to="Contact" smooth offset={-48}>
           <li>Contato</li>
         </Link>
+
+        <RiMenu3Line className="mobile-menu" />
       </NavLinks>
     </Container>
   );

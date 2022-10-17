@@ -99,5 +99,19 @@ export const NavLinks = styled.ul`
     &:hover::after {
       width: 100%;
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 `;
