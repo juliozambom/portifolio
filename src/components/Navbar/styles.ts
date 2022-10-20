@@ -111,6 +111,11 @@ export const NavLinks = styled.ul`
     width: 2rem;
     height: 2rem;
     display: none;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.9);
+    }
 
     @media (max-width: 768px) {
       display: block;
