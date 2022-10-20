@@ -2,6 +2,7 @@ import { Link } from 'react-scroll';
 import { RiMenu3Line } from 'react-icons/ri';
 
 import { Container, NavLinks } from './styles';
+import MobileMenu from '../MobileMenu';
 
 export default function Navbar() {
   const phrases = [
@@ -44,6 +45,8 @@ export default function Navbar() {
 
         <RiMenu3Line className="mobile-menu" />
       </NavLinks>
+
+      <MobileMenu />
     </Container>
   );
 }
