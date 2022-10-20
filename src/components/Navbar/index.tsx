@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { RiMenu3Line } from 'react-icons/ri';
 
@@ -5,6 +6,8 @@ import { Container, NavLinks } from './styles';
 import MobileMenu from '../MobileMenu';
 
 export default function Navbar() {
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+
   const phrases = [
     'div',
     'react',
@@ -43,10 +46,16 @@ export default function Navbar() {
           <li>Contato</li>
         </Link>
 
-        <RiMenu3Line className="mobile-menu" />
+        <RiMenu3Line
+          className="mobile-menu"
+          onClick={() => setIsMobileMenuActive(true)}
+        />
       </NavLinks>
 
-      <MobileMenu />
+      <MobileMenu
+        isMenuActive={isMobileMenuActive}
+        setIsMenuActive={setIsMobileMenuActive}
+      />
     </Container>
   );
 }

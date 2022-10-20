@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   position: fixed;
   right: 0;
   top: 0;
@@ -9,12 +10,13 @@ export const Container = styled.div`
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   z-index: 5;
+  display: none;
 
   ul {
     background: ${({ theme }) => theme.colors.purple[900]};
     width: 60vw;
     height: 100vh;
-    right: 0;
+    right: -100%;
     position: absolute;
     display: flex;
     flex-direction: column;
