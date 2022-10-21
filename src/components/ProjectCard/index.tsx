@@ -1,6 +1,20 @@
 import { Container, ProjectDetails } from './styles';
 
-export default function ProjectCard() {
+import { IProject } from '../../utils/projects';
+
+interface ProjectCardProps {
+  project: IProject;
+}
+
+export default function ProjectCard({ project }: ProjectCardProps) {
+  function renderTechs(tech: string, index: number) {
+    if (!((index + 1) % 3 === 0)) {
+      return tech + '•';
+    }
+
+    return tech;
+  }
+
   return (
     <Container>
       <div className="project-image-container">
@@ -11,11 +25,15 @@ export default function ProjectCard() {
       </div>
 
       <ProjectDetails>
-        <div>
-          <h1 className="project-title">BetterWorld</h1>
-          <span className="area">Front-end</span>
+        <div className="top">
+          <h1 className="project-title">{project.name}</h1>
+          <span className="area">{project.area}</span>
         </div>
-        <span className="techs">HTML • CSS • JAVASCRIPT</span>
+        <div className="techs-container">
+          {project.technologies.map((tech) => (
+            <span className="techs">{tech}</span>
+          ))}
+        </div>
       </ProjectDetails>
     </Container>
   );

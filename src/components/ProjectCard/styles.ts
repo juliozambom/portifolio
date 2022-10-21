@@ -31,7 +31,7 @@ export const Container = styled.div`
 export const ProjectDetails = styled.div`
   margin-top: 16px;
 
-  div {
+  .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +44,13 @@ export const ProjectDetails = styled.div`
 
   .area {
     font-size: 1.1rem;
+  }
+
+  .techs-container {
+    display: flex;
+    justify-content: center;
+    gap: 0rem 1.5rem;
+    flex-wrap: wrap;
   }
 
   .techs {
