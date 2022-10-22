@@ -23,7 +23,7 @@ export default [
       'HTML',
     ],
     github: '',
-    deploy: '',
+    deploy: 'https://betterworld.vercel.app',
     image: 'https://i.imgur.com/8Z7Z7Zu.png',
   },
   {
