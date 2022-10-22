@@ -25,6 +25,7 @@ export const Container = styled.div`
   .tech-name {
     margin-top: 1rem;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
 `;
