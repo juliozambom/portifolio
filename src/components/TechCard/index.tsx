@@ -1,15 +1,16 @@
 import { Container } from './styles';
-import { DiJavascript1 } from 'react-icons/di';
 
-export default function TechCard() {
+import { ITech } from '../../utils/techs';
+
+import img from '../../assets/techs/js.png';
+
+export default function TechCard({ name, icon }: ITech) {
   return (
     <Container>
       <div className="tech-wrapper">
-        <div className="tech-icon">
-          <DiJavascript1 className="tech-icon" />
-        </div>
+        <img className="tech-icon" src={icon} />
       </div>
-      <span className="tech-name">JavaScript</span>
+      <h2 className="tech-name">{name}</h2>
     </Container>
   );
 }
