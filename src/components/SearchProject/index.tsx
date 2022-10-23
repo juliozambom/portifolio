@@ -24,10 +24,12 @@ export default function SearchProject() {
     show: {
       width: '110%',
       height: '100%',
+      opacity: 1
     },
     hidden: {
       width: '0%',
       height: '0%',
+      opacity: 0
     },
   };
 
@@ -52,7 +54,7 @@ export default function SearchProject() {
           as={motion.div}
           variants={SelectorVariants}
           animate={isFilterTypeContainerOpen ? 'show' : 'hidden'}
-          transition={{ duration: 0.15 }}
+          transition={{ duration: 0.1 }}
           className="dropdown-menu"
         />
       </FilterTypeButton>

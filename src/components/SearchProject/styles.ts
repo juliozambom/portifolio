@@ -7,7 +7,7 @@ export const Container = styled.div`
   button {
     background: ${({ theme }) => theme.colors.purple[300]};
     height: 3rem;
-    margin-left: 2rem;
+    margin-left: 0rem;
     border-radius: 0.7rem;
     position: relative;
     transition: all 0.15s ease-in;
@@ -58,12 +58,13 @@ export const Container = styled.div`
 export const SearchInput = styled.input.attrs({
   type: 'text',
 })`
-  width: 60%;
+  width: 55%;
   background: ${({ theme }) => theme.colors.purple[300]};
   border: 0;
   height: 3rem;
   border-radius: 0.7rem;
   padding: 0 1.5rem;
+  margin-right: 5%;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.purple[50]};
@@ -75,13 +76,14 @@ export const SearchInput = styled.input.attrs({
 `;
 
 export const FilterTypeButton = styled.button`
-  width: 20%;
+  width: 17%;
+  margin-right: 2%;
 `;
 
 export const FilterTypeContainer = styled.div``;
 
 export const OrderButton = styled.button`
-  width: 25%;
+  width: 21%;
 `;
 
 export const OrderTypeContainer = styled.div``;
