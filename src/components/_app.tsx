@@ -9,6 +9,8 @@ import Projects from '../sections/Projects';
 import Techs from '../sections/Techs';
 import Contact from '../sections/Contact';
 import Footer from './Footer';
+import Home from '../pages/Home';
+import AllProjects from '../pages/AllProjects';
 
 export default function App() {
   const colorMode = 'light';
@@ -16,11 +18,8 @@ export default function App() {
     <ThemeProvider theme={theme[colorMode]}>
       <GlobalStyle />
       <Navbar />
-      <Header />
-      <About />
-      <Projects />
-      <Techs />
-      <Contact />
+      {/* <Home /> */}
+      <AllProjects />
       <Footer />
     </ThemeProvider>
   );
