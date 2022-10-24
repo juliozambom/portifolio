@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 import ProjectCard from '../../components/ProjectCard';
 import projects from '../../utils/projects';
 import { Container } from './styles';
 
 export default function Projects() {
+  const navigate = useNavigate();
+
   return (
     <Container id="Projects">
       <h1 className="title">Projetos</h1>
@@ -14,7 +18,7 @@ export default function Projects() {
         )}
       </div>
 
-      <button>Ver mais</button>
+      <button onClick={() => navigate('/projects')}>Ver mais</button>
     </Container>
   );
 }
