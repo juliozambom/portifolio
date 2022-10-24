@@ -1,11 +1,11 @@
 import SearchProject from '../../components/SearchProject';
-import ProjectDetailedCard from '../../components/ProjectDetailedCard';
+import ProjectDetailedCards from '../../components/ProjectDetailedCards';
 
 export default function AllProjects() {
   return (
     <>
       <SearchProject />
-      <ProjectDetailedCard />
+      <ProjectDetailedCards />
     </>
   );
 }
