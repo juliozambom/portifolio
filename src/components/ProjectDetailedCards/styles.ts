@@ -10,6 +10,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
   }
+
+  hr {
+    margin: 3rem 0 2rem 0;
+    color: red;
+  }
 `;
 
 export const ProjectPreview = styled.img`

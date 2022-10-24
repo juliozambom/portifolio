@@ -31,13 +31,16 @@ export default function ProjectDetailedCards() {
                   <span>Repositório</span>
                 </a>
 
-                <a target="_blank" href={project.deploy}>
-                  <AiOutlineLink className="link-icon" />
-                  <span>Deploy</span>
-                </a>
+                {project.deploy && (
+                  <a target="_blank" href={project.deploy}>
+                    <AiOutlineLink className="link-icon" />
+                    <span>Deploy</span>
+                  </a>
+                )}
               </div>
             </ProjectDetails>
           </div>
+          <hr />
         </>
       ))}
     </Container>
