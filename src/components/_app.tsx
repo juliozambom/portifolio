@@ -1,4 +1,7 @@
 import { GlobalStyle } from '../styles/global';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
 
@@ -18,8 +21,12 @@ export default function App() {
     <ThemeProvider theme={theme[colorMode]}>
       <GlobalStyle />
       <Navbar />
-      {/* <Home /> */}
-      <AllProjects />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<AllProjects />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </ThemeProvider>
   );
