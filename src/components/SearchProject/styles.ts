@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding-top: 8rem;
+  padding-top: 3.5rem;
   display: flex;
 
   button {

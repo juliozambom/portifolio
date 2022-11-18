@@ -40,10 +40,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body {
-        max-width: 1400px;
-        width: 90%;
         background: ${theme.light.colors.purple[400]};
-        margin: 0 auto;
         font-family: 'Poppins', sans-serif;
         color: ${theme.light.colors.purple[50]};
     }

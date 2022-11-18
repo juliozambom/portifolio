@@ -4,6 +4,8 @@ import SearchProject from '../../components/SearchProject';
 import ProjectDetailedCards from '../../components/ProjectDetailedCards';
 import projects, { IProject } from '../../utils/projects';
 
+import { Container } from './styles';
+
 export default function AllProjects() {
   const [projectsData, setProjectsData] = useState<IProject[]>(projects);
 
@@ -12,9 +14,9 @@ export default function AllProjects() {
   }
 
   return (
-    <>
+    <Container>
       <SearchProject onChange={changeFilteredProjects}/>
       <ProjectDetailedCards projects={projectsData}/>
-    </>
+    </Container>
   );
 }

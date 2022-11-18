@@ -11,7 +11,7 @@ interface IProjectDetailedCards {
 export default function ProjectDetailedCards({ projects }: IProjectDetailedCards) {
   return (
     <Container>
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <>
           <div className="project-container">
             <ProjectPreview src={project.image} />
@@ -45,7 +45,9 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
               </div>
             </ProjectDetails>
           </div>
-          <hr />
+          {index < projects.length - 1 && (
+            <hr />
+          )}
         </>
       ))}
     </Container>

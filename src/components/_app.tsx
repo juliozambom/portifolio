@@ -29,7 +29,6 @@ export default function App() {
           <Route path="/projects" element={<AllProjects />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </ThemeProvider>
   );
 }
