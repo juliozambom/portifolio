@@ -12,7 +12,7 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
   return (
     <Container>
       {projects.map((project, index) => (
-        <>
+        <div key={project.name}>
           <div className="project-container">
             <ProjectPreview src={project.image} />
             <ProjectDetails>
@@ -22,7 +22,7 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
               </div>
               <div className="techs-container">
                 {project.technologies.map((tech) => (
-                  <span className="techs">{tech}</span>
+                  <span className="techs" key={tech}>{tech}</span>
                 ))}
               </div>
 
@@ -48,7 +48,7 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
           {index < projects.length - 1 && (
             <hr />
           )}
-        </>
+        </div>
       ))}
     </Container>
   );

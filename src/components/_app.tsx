@@ -21,8 +21,8 @@ export default function App() {
   return (
     <ThemeProvider theme={theme[colorMode]}>
       <GlobalStyle />
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
