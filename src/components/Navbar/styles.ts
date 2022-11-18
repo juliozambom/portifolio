@@ -18,6 +18,7 @@ export const Container = styled.nav<IContainerProps>`
     display: flex;
     overflow: hidden;
     width: calc(100% + 2px);
+    cursor: pointer;
   }
 
   .dynamic-text-list {

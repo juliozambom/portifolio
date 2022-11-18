@@ -4,11 +4,13 @@ import { RiMenu3Line } from 'react-icons/ri';
 
 import { Container, NavLinks } from './styles';
 import MobileMenu from '../MobileMenu';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
   const [isNavLinksActive, setIsNavLinksActive] = useState(true);
+
+  const navigate = useNavigate();
 
   const { pathname } = useLocation();
 
@@ -34,7 +36,7 @@ export default function Navbar() {
 
   return (
     <Container maxWordLength={maxWordLength} wordsQuantity={phrases.length}>
-      <div className="static-container">
+      <div className="static-container" onClick={() => navigate('/')}>
         <div className="dynamic-text-list">
           {phrases.map((phrase) => (
             <div key={phrase} className="dynamic-text">
