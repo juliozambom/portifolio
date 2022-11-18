@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { AiOutlineOrderedList } from 'react-icons/ai';
@@ -12,11 +12,27 @@ import {
   FilterTypeContainer,
 } from './styles';
 import { theme } from '../../styles/theme';
+import projects, { IProject } from '../../utils/projects';
 
-export default function SearchProject() {
+interface ISearchProjectProps {
+  onChange: (projects: IProject[]) => void;
+}
+
+export default function SearchProject({ onChange }: ISearchProjectProps) {
   const [isOrderTypeContainerOpen, setIsOrderTypeContainerOpen] = useState(false);
 
   const [isFilterTypeContainerOpen, setIsFilterTypeContainerOpen] = useState(false);
+
+  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const filteredProjects = projects.filter((project) => {
+      return project.name.toLowerCase().includes(searchQuery.toLowerCase());
+    })
+
+    onChange(filteredProjects);
+
+  }, [searchQuery])
 
   const SelectorVariants = {
     show: {
@@ -33,7 +49,10 @@ export default function SearchProject() {
 
   return (
     <Container>
-      <SearchInput placeholder="Pesquise algum projeto..." />
+      <SearchInput 
+        placeholder="Pesquise algum projeto..." 
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
 
       <FilterTypeButton
         className={isFilterTypeContainerOpen ? 'active' : ''}

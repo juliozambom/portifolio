@@ -1,9 +1,14 @@
-import { Container, ProjectPreview, ProjectDetails } from './styles';
-
-import projects from '../../utils/projects';
 import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai';
 
-export default function ProjectDetailedCards() {
+import { Container, ProjectPreview, ProjectDetails } from './styles';
+
+import { IProject } from '../../utils/projects';
+
+interface IProjectDetailedCards {
+  projects: IProject[];
+}
+
+export default function ProjectDetailedCards({ projects }: IProjectDetailedCards) {
   return (
     <Container>
       {projects.map((project) => (
