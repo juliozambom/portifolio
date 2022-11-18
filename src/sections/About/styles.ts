@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FaReact } from 'react-icons/fa';
 
 export const Container = styled.div`
-  margin-top: 150px;
+  margin-top: 6rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
