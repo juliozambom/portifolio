@@ -65,6 +65,11 @@ export const SearchInput = styled.input.attrs({
   border-radius: 0.7rem;
   padding: 0 1.5rem;
   margin-right: 5%;
+  outline: 0;
+  color: ${({ theme }) => theme.colors.purple[50]};
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.purple[50]};

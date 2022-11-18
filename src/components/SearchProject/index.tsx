@@ -14,11 +14,9 @@ import {
 import { theme } from '../../styles/theme';
 
 export default function SearchProject() {
-  const [isOrderTypeContainerOpen, setIsOrderTypeContainerOpen] =
-    useState(false);
+  const [isOrderTypeContainerOpen, setIsOrderTypeContainerOpen] = useState(false);
 
-  const [isFilterTypeContainerOpen, setIsFilterTypeContainerOpen] =
-    useState(false);
+  const [isFilterTypeContainerOpen, setIsFilterTypeContainerOpen] = useState(false);
 
   const SelectorVariants = {
     show: {

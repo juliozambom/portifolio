@@ -10,7 +10,7 @@ export interface IProject {
 
 export default [
   {
-    name: 'BetterWorld',
+    name: 'Trainya',
     area: 'Front-end',
     description:
       'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
