@@ -14,14 +14,6 @@ export default function Navbar() {
 
   const { pathname } = useLocation();
 
-  useLayoutEffect(() => {
-    if(pathname === '/projects') {
-      setIsNavLinksActive(false);
-    } else {
-      setIsNavLinksActive(true);
-    }
-  }, [pathname])
-
   const phrases = [
     'div',
     'react',
@@ -46,7 +38,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isNavLinksActive && (
+      {pathname !== '/projects' ? (
           <NavLinks>
             <Link to="About" smooth offset={-48}>
               <li>Sobre</li>
@@ -65,6 +57,10 @@ export default function Navbar() {
               className="mobile-menu"
               onClick={() => setIsMobileMenuActive(true)}
             />
+          </NavLinks>
+      ) : (
+          <NavLinks>
+              <li onClick={() => navigate('/')}>Início</li>            
           </NavLinks>
       )}
 
