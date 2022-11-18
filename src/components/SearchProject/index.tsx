@@ -54,49 +54,51 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
 
-      <FilterTypeButton
-        className={isFilterTypeContainerOpen ? 'active' : ''}
-        onClick={() => {
-          setIsFilterTypeContainerOpen((prev) => !prev);
-          setIsOrderTypeContainerOpen(false);
-        }}
-      >
-        <AiOutlineOrderedList
-          className="icon"
-          size={24}
-          color={theme.light.colors.purple[50]}
-        />
-        <p>Filtros</p>
-        <FilterTypeContainer
-          as={motion.div}
-          variants={SelectorVariants}
-          animate={isFilterTypeContainerOpen ? 'show' : 'hidden'}
-          transition={{ duration: 0.1 }}
-          className="dropdown-menu"
-        />
-      </FilterTypeButton>
+      <div className="button-wrapper">
+        <FilterTypeButton
+          className={isFilterTypeContainerOpen ? 'active' : ''}
+          onClick={() => {
+            setIsFilterTypeContainerOpen((prev) => !prev);
+            setIsOrderTypeContainerOpen(false);
+          }}
+        >
+          <AiOutlineOrderedList
+            className="icon"
+            size={24}
+            color={theme.light.colors.purple[50]}
+          />
+          <p>Filtros</p>
+          <FilterTypeContainer
+            as={motion.div}
+            variants={SelectorVariants}
+            animate={isFilterTypeContainerOpen ? 'show' : 'hidden'}
+            transition={{ duration: 0.1 }}
+            className="dropdown-menu"
+          />
+        </FilterTypeButton>
 
-      <OrderButton
-        className={isOrderTypeContainerOpen ? 'active' : ''}
-        onClick={() => {
-          setIsOrderTypeContainerOpen((prev) => !prev);
-          setIsFilterTypeContainerOpen(false);
-        }}
-      >
-        <AiOutlineOrderedList
-          className="icon"
-          size={24}
-          color={theme.light.colors.purple[50]}
-        />
-        <p> Ordenar por</p>
-        <OrderTypeContainer
-          as={motion.div}
-          variants={SelectorVariants}
-          animate={isOrderTypeContainerOpen ? 'show' : 'hidden'}
-          transition={{ duration: 0.15 }}
-          className="dropdown-menu"
-        />
-      </OrderButton>
+        <OrderButton
+          className={isOrderTypeContainerOpen ? 'active' : ''}
+          onClick={() => {
+            setIsOrderTypeContainerOpen((prev) => !prev);
+            setIsFilterTypeContainerOpen(false);
+          }}
+        >
+          <AiOutlineOrderedList
+            className="icon"
+            size={24}
+            color={theme.light.colors.purple[50]}
+          />
+          <p> Ordenar por</p>
+          <OrderTypeContainer
+            as={motion.div}
+            variants={SelectorVariants}
+            animate={isOrderTypeContainerOpen ? 'show' : 'hidden'}
+            transition={{ duration: 0.15 }}
+            className="dropdown-menu"
+          />
+        </OrderButton>
+      </div>
     </Container>
   );
 }

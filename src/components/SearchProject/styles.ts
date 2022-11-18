@@ -4,6 +4,21 @@ export const Container = styled.div`
   padding-top: 3.5rem;
   display: flex;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .button-wrapper {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+
   button {
     background: ${({ theme }) => theme.colors.purple[300]};
     height: 3rem;
@@ -58,7 +73,7 @@ export const Container = styled.div`
 export const SearchInput = styled.input.attrs({
   type: 'text',
 })`
-  width: 55%;
+  width: 100%;
   background: ${({ theme }) => theme.colors.purple[300]};
   border: 0;
   height: 3rem;
@@ -81,14 +96,14 @@ export const SearchInput = styled.input.attrs({
 `;
 
 export const FilterTypeButton = styled.button`
-  width: 17%;
+  width: 40%;
   margin-right: 2%;
 `;
 
 export const FilterTypeContainer = styled.div``;
 
 export const OrderButton = styled.button`
-  width: 21%;
+  width: 55%;
 `;
 
 export const OrderTypeContainer = styled.div``;
