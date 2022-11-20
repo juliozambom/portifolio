@@ -37,7 +37,6 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
   const SelectorVariants = {
     show: {
       width: '90%',
-      height: '100%',
       opacity: 1
     },
     hidden: {
@@ -70,13 +69,20 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
               />
               <p>Filtros</p>
           </button>
-              <FilterTypeContainer
-                as={motion.div}
-                variants={SelectorVariants}
-                animate={isFilterTypeContainerOpen ? 'show' : 'hidden'}
-                transition={{ duration: 0.1 }}
-                className="dropdown-menu"
-              />
+            <FilterTypeContainer
+              as={motion.div}
+              variants={SelectorVariants}
+              animate={isFilterTypeContainerOpen ? 'show' : 'hidden'}
+              transition={{ duration: 0.1 }}
+              className="dropdown-menu"
+            >
+              <span>Front-end</span>
+              <span>Back-end</span>
+              <span>Full-stack</span>
+              <span>MongoDB</span>
+              <span>MySQL</span>
+              <span>Socket.io</span>
+            </FilterTypeContainer>
         </FilterTypeButton>
 
         <OrderButton>
@@ -100,7 +106,10 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
               animate={isOrderTypeContainerOpen ? 'show' : 'hidden'}
               transition={{ duration: 0.15 }}
               className="dropdown-menu"
-            />
+          >
+            <span>Recentes</span>
+            <span>Antigos</span>
+          </OrderTypeContainer>
           </OrderButton>
         </div>
     </Container>

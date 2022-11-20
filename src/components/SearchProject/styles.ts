@@ -49,10 +49,10 @@ export const Container = styled.div`
 
   .dropdown-menu {
     background: ${({ theme }) => theme.colors.purple[300]};
-    height: 3rem;
     border-radius: 0.7rem;
     position: absolute;
     margin-top: 0.5rem;
+    overflow: hidden;
   }
 
   .active {
@@ -100,7 +100,24 @@ export const FilterTypeButton = styled.div`
   position: relative;
 `;
 
-export const FilterTypeContainer = styled.div``;
+export const FilterTypeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px;
+  gap: 4px;
+  z-index: 10;
+
+  span {
+    font-size: 1rem;
+    padding: 8px 24px;
+    border-radius: 8px;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.purple[500]};
+      cursor: pointer;
+    }
+  }
+`;
 
 export const OrderButton = styled.div`
   width: 55%;
@@ -108,4 +125,20 @@ export const OrderButton = styled.div`
 `;
 
 export const OrderTypeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px;
+  gap: 4px;
+  z-index: 10;
+
+  span {
+    font-size: 1rem;
+    padding: 8px 24px;
+    border-radius: 8px;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.purple[500]};
+      cursor: pointer;
+    }
+  }
 `;
