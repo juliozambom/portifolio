@@ -15,7 +15,7 @@ export default function AllProjects() {
 
   return (
     <Container>
-      <SearchProject onChange={changeFilteredProjects}/>
+      <SearchProject currentProjects={projectsData} onChange={changeFilteredProjects}/>
       <ProjectDetailedCards projects={projectsData}/>
     </Container>
   );

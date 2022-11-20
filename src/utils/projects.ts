@@ -18,6 +18,7 @@ export default [
       'HTML',
       'CSS',
       'JavaScript',
+      'MongoDB',
     ],
     github: '',
     deploy: 'https://betterworld.vercel.app',
@@ -33,6 +34,24 @@ export default [
       'HTML',
       'CSS',
       'JavaScript',
+      'MongoDB',
+    ],
+    github: '',
+    deploy: '',
+    image:
+      'https://camo.githubusercontent.com/c20bb05671ff3096b4a8d7c6bd26602f2ab7c3c0dbe8e793560d3a4275ec1d3e/68747470733a2f2f692e696d6775722e636f6d2f535566754b6b492e706e67',
+  },
+  {
+    name: 'BetteBackrWorld',
+    area: 'Back-end',
+    description:
+      'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Socket.io',
+      'MongoDB',
     ],
     github: '',
     deploy: '',

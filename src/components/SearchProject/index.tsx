@@ -12,27 +12,46 @@ import {
   FilterTypeContainer,
 } from './styles';
 import { theme } from '../../styles/theme';
-import projects, { IProject } from '../../utils/projects';
+import { IProject } from '../../utils/projects';
 
 interface ISearchProjectProps {
+  currentProjects: IProject[];
   onChange: (projects: IProject[]) => void;
 }
 
-export default function SearchProject({ onChange }: ISearchProjectProps) {
-  const [isOrderTypeContainerOpen, setIsOrderTypeContainerOpen] = useState(false);
+export default function SearchProject({ currentProjects, onChange }: ISearchProjectProps) {
+  const [projects, setProjects] = useState(currentProjects);
 
+  const [isOrderTypeContainerOpen, setIsOrderTypeContainerOpen] = useState(false);
   const [isFilterTypeContainerOpen, setIsFilterTypeContainerOpen] = useState(false);
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [filterType, setFilterType] = useState('');
 
   useEffect(() => {
-    const filteredProjects = projects.filter((project) => {
-      return project.name.toLowerCase().includes(searchQuery.toLowerCase());
-    })
-
     onChange(filteredProjects);
+  }, [searchQuery, filterType])
 
-  }, [searchQuery])
+  const searchedProjects = projects.filter((project) => {
+    return project.name.toLowerCase().includes(searchQuery.toLowerCase())
+  });
+
+  const filteredProjects = searchedProjects.filter((project) => {
+    if (['Front-end', 'Back-end', 'Mobile', 'Full-stack'].some((area) => area === filterType)) {
+      return project.area === filterType;
+    }
+
+    if(['MongoDB', 'MySQL', 'Socket.io'].some((tech) => tech === filterType)) {
+      return project.technologies.map((tech) => {
+        return tech === filterType;
+      }).includes(true)
+    }
+
+    return searchedProjects;
+  })
+
+  
+
 
   const SelectorVariants = {
     show: {
@@ -55,6 +74,16 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
     'MySQL',
     'Socket.io'
   ];
+
+  function handleSelectFilterType(type: string) {
+    if(filterType === type) {
+      setFilterType('');
+    } else {
+      setFilterType(type);
+    }
+
+    setIsFilterTypeContainerOpen(false);
+  }
 
   return (
     <Container>
@@ -87,7 +116,7 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
               className="dropdown-menu"
             >
               {filterOptions.map((filterOption) => (
-                <span>{filterOption}</span>
+                <span className={filterType === filterOption ? 'active' : ''} onClick={() => handleSelectFilterType(filterOption)}>{filterOption}</span>
               ))}
             </FilterTypeContainer>
         </FilterTypeButton>
