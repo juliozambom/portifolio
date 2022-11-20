@@ -46,6 +46,16 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
     },
   };
 
+  const filterOptions = [
+    'Front-end',
+    'Back-end',
+    'Mobile',
+    'Full-stack',
+    'MongoDB',
+    'MySQL',
+    'Socket.io'
+  ];
+
   return (
     <Container>
       <SearchInput 
@@ -76,12 +86,9 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
               transition={{ duration: 0.1 }}
               className="dropdown-menu"
             >
-              <span>Front-end</span>
-              <span>Back-end</span>
-              <span>Full-stack</span>
-              <span>MongoDB</span>
-              <span>MySQL</span>
-              <span>Socket.io</span>
+              {filterOptions.map((filterOption) => (
+                <span>{filterOption}</span>
+              ))}
             </FilterTypeContainer>
         </FilterTypeButton>
 
