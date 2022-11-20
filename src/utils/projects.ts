@@ -37,7 +37,9 @@ export default [
     technologies: [
       'React Native',
       'JavaScript',
-      'Animatable'
+      'Animatable',
+      'JavaScript',
+      'JavaScript',
     ],
     github: 'https://github.com/juliozambom/instagram-clone',
     deploy: '',
