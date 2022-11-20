@@ -106,4 +106,5 @@ export const OrderButton = styled.button`
   width: 55%;
 `;
 
-export const OrderTypeContainer = styled.div``;
+export const OrderTypeContainer = styled.div`
+`;

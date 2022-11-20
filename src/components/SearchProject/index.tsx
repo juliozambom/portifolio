@@ -36,7 +36,7 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
 
   const SelectorVariants = {
     show: {
-      width: '110%',
+      width: '90%',
       height: '100%',
       opacity: 1
     },
