@@ -24,11 +24,11 @@ export const Container = styled.div`
     height: 3rem;
     margin-left: 0rem;
     border-radius: 0.7rem;
-    position: relative;
     transition: all 0.15s ease-in;
     display: flex;
     justify-content: center;
     gap: 12px;
+    width: 100%;
 
     &:hover {
       background: ${({ theme }) => theme.colors.purple[600]};
@@ -52,8 +52,7 @@ export const Container = styled.div`
     height: 3rem;
     border-radius: 0.7rem;
     position: absolute;
-    margin-top: 3.5rem;
-    left: 0;
+    margin-top: 0.5rem;
   }
 
   .active {
@@ -95,15 +94,17 @@ export const SearchInput = styled.input.attrs({
   }
 `;
 
-export const FilterTypeButton = styled.button`
+export const FilterTypeButton = styled.div`
   width: 40%;
   margin-right: 2%;
+  position: relative;
 `;
 
 export const FilterTypeContainer = styled.div``;
 
-export const OrderButton = styled.button`
+export const OrderButton = styled.div`
   width: 55%;
+  position: relative;
 `;
 
 export const OrderTypeContainer = styled.div`
