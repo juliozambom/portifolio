@@ -24,7 +24,9 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
         <div key={project.name}>
           <div className="project-container">
             <div className="project-preview-container">
-              <ProjectPreview src={project.image} />
+              <a target="_blank" href={project.deploy || project.github}>
+                <ProjectPreview src={project.image}/>
+              </a>
             </div>
             <ProjectDetails>
               <div className="top">
