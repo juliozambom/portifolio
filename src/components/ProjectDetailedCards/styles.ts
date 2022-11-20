@@ -102,6 +102,20 @@ export const ProjectDetails = styled.div`
       margin-left: -8px;
       transition: all 0.2s ease-in;
 
+      span {
+        color: ${({ theme }) => theme.colors.purple[50]};
+        font-size: 1rem;
+        line-height: 1.1rem;
+      }
+
+      .link-icon {
+        width: 1.5rem;
+        height: auto;
+        color: ${({ theme }) => theme.colors.purple[900]};
+        opacity: 0.6;
+        transition: all 0.2s ease-in;
+      }
+
       @media (max-width: 856px) {
         & + a {
           margin-left: 24px;
@@ -109,23 +123,11 @@ export const ProjectDetails = styled.div`
       }
     }
 
-    span {
-      color: ${({ theme }) => theme.colors.purple[50]};
-      font-size: 1rem;
-      line-height: 1.1rem;
-    }
-
-    .link-icon {
-      width: 1.5rem;
-      height: auto;
-      color: ${({ theme }) => theme.colors.purple[700]}};
-    }
-
     a:hover {
       border: 2px solid ${({ theme }) => theme.colors.purple[700]};
 
       .link-icon {
-        color: ${({ theme }) => theme.colors.purple[900]};
+        opacity: 1;
       }
     }
 
