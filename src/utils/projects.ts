@@ -1,5 +1,6 @@
 import betterWorld from '../assets/projects/better-world.png';
 import instagramClone from '../assets/projects/instagram-clone.png';
+import toDoListApp from '../assets/projects/to-do-list-app.png';
 
 export interface IProject {
   name: string;
@@ -38,11 +39,25 @@ export default [
       'React Native',
       'JavaScript',
       'Animatable',
-      'JavaScript',
-      'JavaScript',
     ],
     github: 'https://github.com/juliozambom/instagram-clone',
     deploy: '',
     image: instagramClone
+  },
+  {
+    name: 'To do list APP',
+    area: 'Full-stack',
+    date: new Date('04-05-2022'),
+    description: 'Aplicativo onde o usuário pode criar suas próprias notas e salva-lás em seu usuário previamente cadastrado no sistema',
+    technologies: [
+      'React Native',
+      'JavaScript',
+      'MySQL',
+      'Moti',
+      'Axios'
+    ],
+    github: 'https://github.com/juliozambom/to-do-list-mobileapp',
+    deploy: '',
+    image: toDoListApp
   },
 ];
