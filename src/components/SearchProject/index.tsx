@@ -55,7 +55,7 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
     const dateOne = Number(a.date);
     const dateTwo = Number(b.date);
 
-    if(order === 'Oldest') {
+    if(order === 'Antigos') {
       return dateOne - dateTwo;
     } else {
       return dateTwo - dateOne;
@@ -138,7 +138,7 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
 
         <OrderButton>
           <button
-            className={isOrderTypeContainerOpen ? 'active' : ''}
+            className={isOrderTypeContainerOpen || order !== '' ? 'active' : ''}
             onClick={() => {
               setIsOrderTypeContainerOpen((prev) => !prev);
               setIsFilterTypeContainerOpen(false);
@@ -149,7 +149,7 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
               size={24}
               color={theme.light.colors.purple[50]}
             />
-            <p> Ordenar por</p>
+            <p>{order === '' ? 'Ordenar por' : order}</p>
           </button>
           <OrderTypeContainer
               as={motion.div}
@@ -159,15 +159,15 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
               className="dropdown-menu"
           >
             <span 
-              onClick={() => handleSelectOrder('Newest')}
-              className={order === 'Newest' ? 'active' : ''}
+              onClick={() => handleSelectOrder('Recentes')}
+              className={order === 'Recentes' ? 'active' : ''}
             >
               Recentes
             </span>
 
             <span 
-              onClick={() => handleSelectOrder('Oldest')}
-              className={order === 'Oldest' ? 'active' : ''}
+              onClick={() => handleSelectOrder('Antigos')}
+              className={order === 'Antigos' ? 'active' : ''}
             >
               Antigos
             </span>
