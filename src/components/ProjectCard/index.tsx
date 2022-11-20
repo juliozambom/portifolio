@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.map((tech, index) => {
             if(index < 3) {
               return (
-                <span className="techs">{index < 2 ? `${tech} -` : tech}</span>
+                <span className="techs">{index < 2 ? `${tech} |` : tech}</span>
               )
             }
           })}

@@ -83,7 +83,9 @@ export const ProjectDetails = styled.div`
   }
 
   .techs-container {
+    display: flex;
     margin-top: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .techs {
