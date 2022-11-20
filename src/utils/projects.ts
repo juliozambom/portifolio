@@ -1,3 +1,6 @@
+import betterWorld from '../assets/projects/better-world.png';
+import instagramClone from '../assets/projects/instagram-clone.png';
+
 export interface IProject {
   name: string;
   area: string;
@@ -11,7 +14,7 @@ export interface IProject {
 
 export default [
   {
-    name: 'Trainya',
+    name: 'BetterWorld',
     area: 'Front-end',
     date: new Date('11-16-2022'),
     description:
@@ -20,46 +23,24 @@ export default [
       'HTML',
       'CSS',
       'JavaScript',
-      'MongoDB',
     ],
-    github: '',
+    github: 'https://github.com/juliozambom/betterworld',
     deploy: 'https://betterworld.vercel.app',
-    image:
-      'https://camo.githubusercontent.com/c20bb05671ff3096b4a8d7c6bd26602f2ab7c3c0dbe8e793560d3a4275ec1d3e/68747470733a2f2f692e696d6775722e636f6d2f535566754b6b492e706e67',
+    image: betterWorld
   },
   {
-    name: 'BetterWorld',
-    area: 'Front-end',
-    date: new Date('11-16-2021'),
+    name: 'Instagram Clone',
+    area: 'Mobile',
+    date: new Date('02-26-2022'),
     description:
-      'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
+      'Aplicação clone da tela de posts do instagram, desenvolvida com o intuito de aprimorar meus conhecimentos em React Native.',
     technologies: [
-      'HTML',
-      'CSS',
+      'React Native',
       'JavaScript',
-      'MongoDB',
+      'Animatable'
     ],
-    github: '',
+    github: 'https://github.com/juliozambom/instagram-clone',
     deploy: '',
-    image:
-      'https://camo.githubusercontent.com/c20bb05671ff3096b4a8d7c6bd26602f2ab7c3c0dbe8e793560d3a4275ec1d3e/68747470733a2f2f692e696d6775722e636f6d2f535566754b6b492e706e67',
-  },
-  {
-    name: 'BetteBackrWorld',
-    area: 'Back-end',
-    date: new Date('11-16-2019'),
-    description:
-      'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Socket.io',
-      'MongoDB',
-    ],
-    github: '',
-    deploy: '',
-    image:
-      'https://camo.githubusercontent.com/c20bb05671ff3096b4a8d7c6bd26602f2ab7c3c0dbe8e793560d3a4275ec1d3e/68747470733a2f2f692e696d6775722e636f6d2f535566754b6b492e706e67',
+    image: instagramClone
   },
 ];
