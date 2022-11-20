@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
   margin-top: 5rem;
@@ -108,10 +109,6 @@ export const ProjectDetails = styled.div`
       }
     }
 
-    a:hover {
-      border: 2px solid ${({ theme }) => theme.colors.purple[700]};
-    }
-
     span {
       color: ${({ theme }) => theme.colors.purple[50]};
       font-size: 1rem;
@@ -121,6 +118,19 @@ export const ProjectDetails = styled.div`
     .link-icon {
       width: 1.5rem;
       height: auto;
+      color: ${({ theme }) => theme.colors.purple[700]}};
     }
-  }
+
+    a:hover {
+      border: 2px solid ${({ theme }) => theme.colors.purple[700]};
+
+      .link-icon {
+        color: ${({ theme }) => theme.colors.purple[900]};
+      }
+    }
+
+    a:active {
+      border: 2px solid ${({ theme }) => theme.colors.purple[900]};
+      transform: scale(1.03);
+    }
 `;
