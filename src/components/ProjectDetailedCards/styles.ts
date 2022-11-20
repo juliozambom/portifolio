@@ -97,7 +97,7 @@ export const ProjectDetails = styled.div`
     opacity: 0.7;
 
     p {
-      font-size: 0.9rem;
+      font-size: 18px;
     }
   }
 
