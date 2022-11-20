@@ -48,7 +48,6 @@ export const ProjectDetails = styled.div`
 
   .techs-container {
     display: flex;
-    justify-content: center;
     gap: 0rem 1.5rem;
     flex-wrap: wrap;
   }

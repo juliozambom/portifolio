@@ -96,7 +96,9 @@ export default function SearchProject({ onChange }: ISearchProjectProps) {
             animate={isOrderTypeContainerOpen ? 'show' : 'hidden'}
             transition={{ duration: 0.15 }}
             className="dropdown-menu"
-          />
+          >
+            <p>oi</p>
+          </OrderTypeContainer>
         </OrderButton>
       </div>
     </Container>
