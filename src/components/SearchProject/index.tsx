@@ -158,8 +158,19 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
               transition={{ duration: 0.15 }}
               className="dropdown-menu"
           >
-            <span onClick={() => handleSelectOrder('Newest')}>Recentes</span>
-            <span onClick={() => handleSelectOrder('Oldest')}>Antigos</span>
+            <span 
+              onClick={() => handleSelectOrder('Newest')}
+              className={order === 'Newest' ? 'active' : ''}
+            >
+              Recentes
+            </span>
+
+            <span 
+              onClick={() => handleSelectOrder('Oldest')}
+              className={order === 'Oldest' ? 'active' : ''}
+            >
+              Antigos
+            </span>
           </OrderTypeContainer>
           </OrderButton>
         </div>

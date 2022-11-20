@@ -137,6 +137,10 @@ export const OrderTypeContainer = styled.div`
   gap: 4px;
   z-index: 10;
 
+  .active {
+      background: ${({ theme }) => theme.colors.purple[500]};
+  }
+
   span {
     font-size: 1rem;
     padding: 8px 24px;
