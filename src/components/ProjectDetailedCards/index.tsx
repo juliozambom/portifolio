@@ -9,6 +9,15 @@ interface IProjectDetailedCards {
 }
 
 export default function ProjectDetailedCards({ projects }: IProjectDetailedCards) {
+
+  if(projects.length === 0) {
+    return (
+      <Container>
+        Nenhum projeto foi encontrado!
+      </Container>
+    )
+  }
+
   return (
     <Container>
       {projects.map((project, index) => (
