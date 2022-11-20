@@ -51,6 +51,7 @@ export const Container = styled.div`
     background: ${({ theme }) => theme.colors.purple[300]};
     border-radius: 0.7rem;
     position: absolute;
+    display: flex;
     margin-top: 0.5rem;
     overflow: hidden;
   }
@@ -115,6 +116,7 @@ export const FilterTypeContainer = styled.div`
     font-size: 1rem;
     padding: 8px 24px;
     border-radius: 8px;
+    white-space: nowrap;
 
     &:hover {
       background: ${({ theme }) => theme.colors.purple[500]};
@@ -139,6 +141,7 @@ export const OrderTypeContainer = styled.div`
     font-size: 1rem;
     padding: 8px 24px;
     border-radius: 8px;
+    white-space: nowrap;
 
     &:hover {
       background: ${({ theme }) => theme.colors.purple[500]};

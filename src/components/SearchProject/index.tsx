@@ -50,9 +50,6 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
     return searchedProjects;
   })
 
-  
-
-
   const SelectorVariants = {
     show: {
       width: '90%',
@@ -60,7 +57,6 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
     },
     hidden: {
       width: '0%',
-      height: '0%',
       opacity: 0
     },
   };
@@ -95,7 +91,7 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
       <div className="button-wrapper">
         <FilterTypeButton>
             <button
-              className={isFilterTypeContainerOpen ? 'active' : ''}
+              className={isFilterTypeContainerOpen || filterType !== '' ? 'active' : ''}
               onClick={() => {
                 setIsFilterTypeContainerOpen((prev) => !prev);
                 setIsOrderTypeContainerOpen(false);
@@ -106,7 +102,7 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
                 size={24}
                 color={theme.light.colors.purple[50]}
               />
-              <p>Filtros</p>
+              <p>{filterType === '' ? 'Filtros' : filterType}</p>
           </button>
             <FilterTypeContainer
               as={motion.div}
