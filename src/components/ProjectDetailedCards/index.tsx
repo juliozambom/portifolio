@@ -23,7 +23,9 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
       {projects.map((project, index) => (
         <div key={project.name}>
           <div className="project-container">
-            <ProjectPreview src={project.image} />
+            <div className="project-preview-container">
+              <ProjectPreview src={project.image} />
+            </div>
             <ProjectDetails>
               <div className="top">
                 <h1 className="project-title">{project.name}</h1>

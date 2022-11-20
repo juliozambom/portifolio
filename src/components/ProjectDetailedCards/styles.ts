@@ -21,11 +21,33 @@ export const Container = styled.div`
     margin: 3rem 0 2rem 0;
     color: red;
   }
+
+  .project-preview-container {
+    width: 130%;
+    background: linear-gradient(
+      109.58deg,
+      rgba(50, 38, 89, 0.5) 12.63%,
+      rgba(250, 245, 255, 0.5) 94.5%
+    );
+
+    @media (max-width: 856px) {
+      width: 100%;
+    }
+  }
 `;
 
 export const ProjectPreview = styled.img`
-  width: 55%;
+  display: flex;
+  width: 100%;
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
 
+  &:hover {
+    transform: scale(1.01);
+    opacity: 1;
+    cursor: pointer;
+  }
+  
   @media (max-width: 856px) {
       width: 100%;
     }
@@ -135,4 +157,5 @@ export const ProjectDetails = styled.div`
       border: 2px solid ${({ theme }) => theme.colors.purple[900]};
       transform: scale(1.03);
     }
+  }
 `;
