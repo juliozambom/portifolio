@@ -27,10 +27,11 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
 
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('');
+  const [order, setOrder] = useState('');
 
   useEffect(() => {
-    onChange(filteredProjects);
-  }, [searchQuery, filterType])
+    onChange(orderedProjects);
+  }, [searchQuery, filterType, order])
 
   const searchedProjects = projects.filter((project) => {
     return project.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -49,6 +50,19 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
 
     return searchedProjects;
   })
+
+  const orderedProjects = filteredProjects.sort((a, b) => {
+    const dateOne = Number(a.date);
+    const dateTwo = Number(b.date);
+
+    if(order === 'Oldest') {
+      return dateOne - dateTwo;
+    } else {
+      return dateTwo - dateOne;
+    }
+  })
+
+  console.log(orderedProjects);
 
   const SelectorVariants = {
     show: {
@@ -79,6 +93,11 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
     }
 
     setIsFilterTypeContainerOpen(false);
+  }
+
+  function handleSelectOrder(order: string) {
+    setOrder((prev) => prev === order ? '' : order);
+    setIsOrderTypeContainerOpen(false);
   }
 
   return (
@@ -139,8 +158,8 @@ export default function SearchProject({ currentProjects, onChange }: ISearchProj
               transition={{ duration: 0.15 }}
               className="dropdown-menu"
           >
-            <span>Recentes</span>
-            <span>Antigos</span>
+            <span onClick={() => handleSelectOrder('Newest')}>Recentes</span>
+            <span onClick={() => handleSelectOrder('Oldest')}>Antigos</span>
           </OrderTypeContainer>
           </OrderButton>
         </div>

@@ -1,6 +1,7 @@
 export interface IProject {
   name: string;
   area: string;
+  date: Date;
   description: string;
   technologies: Array<string>;
   github: string;
@@ -12,6 +13,7 @@ export default [
   {
     name: 'Trainya',
     area: 'Front-end',
+    date: new Date('11-16-2022'),
     description:
       'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
     technologies: [
@@ -28,6 +30,7 @@ export default [
   {
     name: 'BetterWorld',
     area: 'Front-end',
+    date: new Date('11-16-2021'),
     description:
       'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
     technologies: [
@@ -44,6 +47,7 @@ export default [
   {
     name: 'BetteBackrWorld',
     area: 'Back-end',
+    date: new Date('11-16-2019'),
     description:
       'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
     technologies: [
