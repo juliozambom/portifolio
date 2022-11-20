@@ -48,12 +48,13 @@ export const ProjectDetails = styled.div`
 
   .techs-container {
     display: flex;
-    gap: 0rem 1.5rem;
+    gap: 0 8px;
     flex-wrap: wrap;
   }
 
   .techs {
     color: ${({ theme }) => theme.colors.purple[700]};
     font-weight: 600;
+    font-size: 16px;
   }
 `;

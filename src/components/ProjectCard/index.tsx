@@ -7,14 +7,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  function renderTechs(tech: string, index: number) {
-    if (!((index + 1) % 3 === 0)) {
-      return tech + '•';
-    }
-
-    return tech;
-  }
-
   return (
     <Container>
       <div className="project-image-container">
@@ -32,8 +24,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <span className="area">{project.area}</span>
         </div>
         <div className="techs-container">
-          {project.technologies.map((tech) => (
-            <span className="techs">{tech}</span>
+          {project.technologies.map((tech, index) => (
+            <span className="techs">{project.technologies.length - 1 === index ? tech : `${tech} -`}</span>
           ))}
         </div>
       </ProjectDetails>
