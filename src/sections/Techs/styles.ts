@@ -13,11 +13,11 @@ export const Container = styled.div`
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @media (max-width: 968px) {
+    @media (max-width: 960px) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
