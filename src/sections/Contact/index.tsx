@@ -15,11 +15,11 @@ export default function Contact() {
       </a>
 
       <div className="links">
-        <a href="">
+        <a target="_blank" href="https://github.com/juliozambom">
           <AiFillGithub className="icon" />
         </a>
 
-        <a href="/">
+        <a target="_blank" href="https://www.linkedin.com/in/julio-zambom-1562aa216/">
           <AiFillLinkedin className="icon" />
         </a>
       </div>

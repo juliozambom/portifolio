@@ -26,11 +26,16 @@ export const Container = styled.div`
     height: 2.5rem;
     opacity: 0.5;
     transition: all 0.4s ease-in-out;
+    color: ${({ theme }) => theme.colors.purple[700]};
   }
 
   .icon:hover {
     opacity: 1;
     transform: scale(1.05);
+  }
+
+  .icon:active {
+    transform: scale(0.95);
   }
 
   h2 {
