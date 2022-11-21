@@ -59,7 +59,7 @@ export default function Navbar() {
             />
           </NavLinks>
       ) : (
-          <NavLinks>
+          <NavLinks isProjectsScreen>
               <li onClick={() => navigate('/')}>Início</li>            
           </NavLinks>
       )}

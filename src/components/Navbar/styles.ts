@@ -5,6 +5,10 @@ interface IContainerProps {
   wordsQuantity: number;
 }
 
+interface INavLinksProps {
+  isProjectsScreen?: boolean;
+}
+
 export const Container = styled.nav<IContainerProps>`
   height: 80px;
   display: flex;
@@ -80,7 +84,7 @@ export const Container = styled.nav<IContainerProps>`
   }
 `;
 
-export const NavLinks = styled.ul`
+export const NavLinks = styled.ul<INavLinksProps>`
   display: flex;
   gap: 40px;
 
@@ -88,6 +92,7 @@ export const NavLinks = styled.ul`
     color: inherit;
     border-bottom: 2px solid transparent;
     cursor: pointer;
+    font-size: 16px;
 
     &::after {
       content: '';
@@ -104,7 +109,7 @@ export const NavLinks = styled.ul`
     }
 
     @media (max-width: 768px) {
-      display: none;
+      display: ${({ isProjectsScreen }) => isProjectsScreen ? 'block' : 'none'};
     }
   }
 
