@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   span {
     color: ${({ theme }) => theme.colors.purple[700]};
+    display: block;
+    margin-bottom: 32px;
   }
 
   .links {
@@ -29,5 +31,13 @@ export const Container = styled.div`
   .icon:hover {
     opacity: 1;
     transform: scale(1.05);
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: #fff;
+    border: 0.1rem solid white;
+    padding: 8px 12px;
+    display: inline;
   }
 `;
