@@ -34,10 +34,31 @@ export const Container = styled.div`
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 18px;
     color: #fff;
     border: 0.1rem solid white;
     padding: 8px 12px;
-    display: inline;
+    animation: pull 1s alternate-reverse infinite;
+    display: inline-block;
+    transition: all 0.2s ease-in;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    } 
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.purple[900]};
+      border: 0.1rem solid ${({ theme }) => theme.colors.purple[900]};
+    }
+
+    @keyframes pull{
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.05);
+      }
+    }
   }
 `;

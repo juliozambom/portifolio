@@ -11,7 +11,7 @@ export default function Contact() {
       <span>work.juliozambom@gmail.com</span>
 
       <a href={resume} target="_blank" className="resume">
-        <h2>Currículo</h2>
+        <h2>Baixar currículo</h2>
       </a>
 
       <div className="links">
