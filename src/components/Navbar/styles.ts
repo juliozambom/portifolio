@@ -92,7 +92,7 @@ export const NavLinks = styled.ul<INavLinksProps>`
     color: inherit;
     border-bottom: 2px solid transparent;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
 
     &::after {
       content: '';
@@ -109,6 +109,7 @@ export const NavLinks = styled.ul<INavLinksProps>`
     }
 
     @media (max-width: 768px) {
+      font-size: 20px;
       display: ${({ isProjectsScreen }) => isProjectsScreen ? 'block' : 'none'};
     }
   }
