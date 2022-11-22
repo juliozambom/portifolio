@@ -123,9 +123,10 @@ export const ProjectDetails = styled.div`
     a {
       display: flex;
       align-items: center;
+      align-self: flex-start;
       gap: 8px;
       border: 2px solid transparent;
-      padding: 4px 8px;
+      padding: 4px 12px;
       border-radius: 24px;
       margin-left: -8px;
       transition: all 0.2s ease-in;
@@ -134,6 +135,7 @@ export const ProjectDetails = styled.div`
         color: ${({ theme }) => theme.colors.purple[50]};
         font-size: 1rem;
         line-height: 1.1rem;
+        margin-right: 4px;
       }
 
       .link-icon {
