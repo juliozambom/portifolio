@@ -1,6 +1,7 @@
 import betterWorld from '../assets/projects/better-world.png';
 import instagramClone from '../assets/projects/instagram-clone.png';
 import toDoListApp from '../assets/projects/to-do-list-app.png';
+import trainya from '../assets/projects/trainya.png';
 
 export interface IProject {
   name: string;
@@ -17,7 +18,7 @@ export default [
   {
     name: 'BetterWorld',
     area: 'Front-end',
-    date: new Date('11-16-2022'),
+    date: new Date('10-13-2022'),
     description:
       'Uma simples landing page de uma empresa fictícia que visa ajudar o meio ambiente.',
     technologies: [
@@ -59,5 +60,24 @@ export default [
     github: 'https://github.com/juliozambom/to-do-list-mobileapp',
     deploy: '',
     image: toDoListApp
+  },
+  {
+    name: 'Trainya APP',
+    area: 'Mobile',
+    date: new Date('11-16-2022'),
+    description: `Foi desenvolvido um sistema de gerenciamento de academias (Plataforma web) e um gestor pessoal de atividades físicas(App mobile).
+      O projeto conta com integrações entre ambas as plataformas, incluindo atualização de informações em tempo real`,
+    technologies: [
+      'React Native',
+      'Styled Components',
+      'Socket.io',
+      'TypeScript',
+      'Expo Camera',
+      'Native Base',
+      'Axios'
+    ],
+    github: 'https://github.com/juliozambom/to-do-list-mobileapp',
+    deploy: '',
+    image: trainya
   },
 ];

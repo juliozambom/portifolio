@@ -24,6 +24,7 @@ export const Container = styled.div`
 
   .project-preview-container {
     width: 130%;
+    height: 100%;
     background: linear-gradient(
       109.58deg,
       rgba(50, 38, 89, 0.5) 12.63%,
@@ -100,6 +101,7 @@ export const ProjectDetails = styled.div`
 
     p {
       font-size: 18px;
+      margin-bottom: 3em;
     }
   }
 
