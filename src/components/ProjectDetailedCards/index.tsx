@@ -1,4 +1,5 @@
 import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai';
+import { FcCancel } from 'react-icons/fc';
 
 import { Container, ProjectPreview, ProjectDetails } from './styles';
 
@@ -44,10 +45,17 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
               </div>
 
               <div className="project-links">
-                <a target="_blank" href={project.github}>
-                  <AiOutlineGithub className="link-icon" />
-                  <span>Repositório</span>
-                </a>
+                {project.github ? (
+                  <a target="_blank" href={project.github}>
+                    <AiOutlineGithub className="link-icon" />
+                    <span>Repositório</span>
+                  </a>
+                ) : (
+                  <a>
+                    <FcCancel className="link-icon"/>
+                    <span>Repositório privado</span>
+                  </a>
+                )}
 
                 {project.deploy && (
                   <a target="_blank" href={project.deploy}>
