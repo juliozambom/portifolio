@@ -145,7 +145,7 @@ export const ProjectDetails = styled.div`
 
       @media (max-width: 856px) {
         & + a {
-          margin-left: 24px;
+          margin-left: 8px;
         }
       }
     }
