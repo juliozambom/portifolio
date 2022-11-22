@@ -31,7 +31,7 @@ export default [
       'Axios'
     ],
     github: '',
-    deploy: '',
+    deploy: 'https://trainya-admin-client.vercel.app',
     image: trainya
   },
   {
