@@ -58,6 +58,9 @@ export const ProjectDetails = styled.div`
   padding-left: 5%;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (max-width: 856px) {
       padding-left: 0; 
@@ -100,14 +103,12 @@ export const ProjectDetails = styled.div`
     opacity: 0.7;
 
     p {
-      font-size: 18px;
-      margin-bottom: 3em;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
   }
 
   .project-links {
-    position: absolute;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 4px;

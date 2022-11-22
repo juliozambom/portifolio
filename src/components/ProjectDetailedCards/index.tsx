@@ -30,19 +30,22 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
               </a>
             </div>
             <ProjectDetails>
-              <div className="top">
-                <h1 className="project-title">{project.name}</h1>
-                <span className="area">{project.area}</span>
-              </div>
-              <div className="techs-container">
-                {project.technologies.map((tech) => (
-                  <span className="techs" key={tech}>{tech}</span>
-                ))}
-              </div>
+              <header>
+                <div className="top">
+                  <h1 className="project-title">{project.name}</h1>
+                  <span className="area">{project.area}</span>
+                </div>
+                
+                <div className="techs-container">
+                  {project.technologies.map((tech) => (
+                    <span className="techs" key={tech}>{tech}</span>
+                  ))}
+                </div>
 
-              <div className="project-description">
-                <p>{project.description}</p>
-              </div>
+                <div className="project-description">
+                  <p>{project.description}</p>
+                </div>
+              </header>
 
               <div className="project-links">
                 {project.deploy && (
