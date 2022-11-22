@@ -121,7 +121,7 @@ export const ProjectDetails = styled.div`
     a {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 8px;
       border: 2px solid transparent;
       padding: 4px 8px;
       border-radius: 24px;
