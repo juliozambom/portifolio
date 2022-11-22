@@ -105,6 +105,7 @@ export const ProjectDetails = styled.div`
     p {
       font-size: 1rem;
       margin-bottom: 1rem;
+      text-align: justify;
     }
   }
 
