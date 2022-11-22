@@ -45,6 +45,13 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
               </div>
 
               <div className="project-links">
+                {project.deploy && (
+                  <a target="_blank" href={project.deploy}>
+                    <AiOutlineLink className="link-icon" />
+                    <span>Deploy</span>
+                  </a>
+                )}
+
                 {project.github ? (
                   <a target="_blank" href={project.github}>
                     <AiOutlineGithub className="link-icon" />
@@ -54,13 +61,6 @@ export default function ProjectDetailedCards({ projects }: IProjectDetailedCards
                   <a>
                     <FcCancel className="link-icon"/>
                     <span>Repositório privado</span>
-                  </a>
-                )}
-
-                {project.deploy && (
-                  <a target="_blank" href={project.deploy}>
-                    <AiOutlineLink className="link-icon" />
-                    <span>Deploy</span>
                   </a>
                 )}
               </div>
