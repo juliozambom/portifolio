@@ -8,7 +8,7 @@ export default function Contact() {
     <Container id="Contact">
       <h1 className="title">Contato</h1>
       <p>Sinta-se à vontade para entrar em contato comigo pelo meu e-mail.</p>
-      <span>work.juliozambom@gmail.com</span>
+      <span>contato.juliozambom@gmail.com</span>
 
       <a href={resume} target="_blank" className="resume">
         <h2>Baixar currículo</h2>
