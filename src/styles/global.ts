@@ -9,6 +9,16 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         list-style: none;
         line-height: 1.5;
+
+        &::-webkit-scrollbar {
+            background: #D6BCFA;
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #44337A;
+            border-radius: 24px;
+        }
     }
 
     html {
