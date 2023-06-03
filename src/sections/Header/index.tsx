@@ -18,8 +18,7 @@ export default function Header() {
           <h2>Prazer, Júlio!</h2>
           <div>
             <p>
-              Dev front-end, em busca de um primeiro emprego, venha conhecer um
-              pouco do meu trabalho!
+              Desenvolvedor Full-Stack, atualmente atuando como Dev Jr. na empresa Curseduca.
             </p>
           </div>
         </PresentationContainer>
